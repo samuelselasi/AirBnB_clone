@@ -3,7 +3,7 @@
 
 from datetime import datetime
 from models import storage
-import uuid
+from uuid import uuid4
 
 
 class BaseModel:
@@ -15,11 +15,11 @@ class BaseModel:
         if kwargs is not None and kwargs != {}:
             for i in kwargs:
                 if i == "created_at":
-                    self.__dict__["created_at"] = datetime.strftime(
+                    self.__dict__["created_at"] = datetime.strptime(
                             kwargs["created_at"], "%Y-%m-%dT%H:%M:%S.%f")
 
                 elif i == "updated_at":
-                    self.__dict__["updated_at"] = datetime.strftime(
+                    self.__dict__["updated_at"] = datetime.strptime(
                             kwargs["updated_at"], "%Y-%m-%dT%H:%M:%S.%f")
 
                 else:
@@ -35,7 +35,7 @@ class BaseModel:
         """Function that returns official string rep of instances"""
 
         return ("[{}] ({}) {}".format(type(self).__name__,
-                self.id, self.__dict_))
+                self.id, self.__dict__))
 
     def save(self):
         """Function to update public instance attributes with current date"""
@@ -47,7 +47,7 @@ class BaseModel:
         """Function that returns a dict with key/value pairs of instances"""
 
         new_dict = self.__dict__.copy()
-        new_dict = type(self).__name__
+        new_dict["__class__"] = type(self).__name__
         new_dict["created_at"] = new_dict["created_at"].isoformat()
         new_dict["updated_at"] = new_dict["updated_at"].isoformat()
         return (new_dict)
