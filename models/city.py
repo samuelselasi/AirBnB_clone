@@ -5,7 +5,7 @@ from models.base_model import BaseModel
 
 
 class City(BaseModel):
-	"""Class that defines City instance attributes."""
-	
-		state_id = ""
-		name = ""
+    """Class that defines City instance attributes."""
+
+    state_id = ""
+    name = ""
