@@ -100,6 +100,9 @@ class HBNBCommand(cmd.Cmd):
             f_list = [str(obj) for patt, obj in storage.all().items()]
             print(f_list)
 
+    def do_update(self, line):
+        """Function that updates an instance based on name and id"""
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
