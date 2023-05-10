@@ -83,6 +83,23 @@ class HBNBCommand(cmd.Cmd):
                     del storage.all()[patt]
                     storage.save()
 
+    def do_all(self, line):
+        """Function that prints all string representation of an instance."""
+
+        if line != "":
+            words = line.split(' ')
+            if words[0] not in storage.classes():
+                print("** class doesn't exist **")
+
+            else:
+                new_list = [str(obj) for patt, obj in storage.all().items()
+                            if type(obj).__name__ == words[0]]
+                print(new_list)
+
+        else:
+            f_list = [str(obj) for patt, obj in storage.all().items()]
+            print(f_list)
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
