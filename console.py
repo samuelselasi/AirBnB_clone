@@ -18,7 +18,7 @@ class HBNBCommand(cmd.Cmd):
     def do_quit(self, line):
         """Function that exits the shell in interactive mode."""
 
-        return
+        return (True)
 
     def emptyline(self):
         """Function that does nothing on ENTER."""
