@@ -10,16 +10,16 @@ a simple copy of the [AirBnB website](https://www.airbnb.com/).
 ## Resources
 **Read or watch**:
 
-* [cmd module]()
-* [cmd module in depth]()
+* [cmd module](https://docs.python.org/3.8/library/cmd.html)
+* [cmd module in depth](http://pymotw.com/2/cmd/)
 * **packages concept page**
-* [uuid module]()
-* [datetime]()
-* [unittest module]()
-* [args/kwargs]()
-* [Python test cheatsheet]()
-* [cmd module wiki page]()
-* [python unittest]()
+* [uuid module](https://docs.python.org/3.8/library/uuid.html)
+* [datetime](https://docs.python.org/3.8/library/datetime.html)
+* [unittest module](https://docs.python.org/3.8/library/unittest.html#module-unittest)
+* [args/kwargs](https://yasoob.me/2013/08/04/args-and-kwargs-in-python-explained/)
+* [Python test cheatsheet](https://www.pythonsheets.com/notes/python-tests.html)
+* [cmd module wiki page](https://wiki.python.org/moin/CmdModule)
+* [python unittest](https://realpython.com/python-testing/)
 
 ## General
 # Command Line Interpreter for Airbnb Clone - The Console
@@ -503,104 +503,241 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 ```
 **No unittests needed**
 
-8. First User
+[8. First User](./user.py)
 
-Write a class User that inherits from BaseModel:
+Write a class `User` that inherits from `BaseModel`:
 
-models/user.py
-Public class attributes:
-email: string - empty string
-password: string - empty string
-first_name: string - empty string
-last_name: string - empty string
-Update FileStorage to manage correctly serialization and deserialization
+* `models/user.py`
+* Public class attributes:
+	* `email`: string - empty string
+	* `password`: string - empty string
+	* `first_name`: string - empty string
+	* `last_name`: string - empty string
+
+Update `FileStorage` to manage correctly serialization and deserialization
 of User.
 
-Update command interpreter (console.py) to allow show, create, destroy, 
-update and all used with User.
+Update command interpreter (`console.py`) to allow `show`, `create`, `destroy`, 
+`update` and `all` used with `User`.
+```
+guillaume@ubuntu:~/AirBnB$ cat test_save_reload_user.py
+#!/usr/bin/python3
+from models import storage
+from models.base_model import BaseModel
+from models.user import User
 
-9. More classes!
+all_objs = storage.all()
+print("-- Reloaded objects --")
+for obj_id in all_objs.keys():
+    obj = all_objs[obj_id]
+    print(obj)
 
-Write all those classes that inherit from BaseModel:
+print("-- Create a new User --")
+my_user = User()
+my_user.first_name = "Betty"
+my_user.last_name = "Bar"
+my_user.email = "airbnb@mail.com"
+my_user.password = "root"
+my_user.save()
+print(my_user)
 
-State (models/state.py):
-Public class attributes:
-name: string - empty string
-City (models/city.py):
-Public class attributes:
-state_id: string - empty string: it will be the State.id
-name: string - empty string
-Amenity (models/amenity.py):
-Public class attributes:
-name: string - empty string
-Place (models/place.py):
-Public class attributes:
-city_id: string - empty string: it will be the City.id
-user_id: string - empty string: it will be the User.id
-name: string - empty string
-description: string - empty string
-number_rooms: integer - 0
-number_bathrooms: integer - 0
-max_guest: integer - 0
-price_by_night: integer - 0
-latitude: float - 0.0
-longitude: float - 0.0
-amenity_ids: list of string - empty list: will be the list of Amenity.id later
-Review (models/review.py):
-Public class attributes:
-place_id: string - empty string: it will be the Place.id
-user_id: string - empty string: it will be the User.id
-text: string - empty string
+print("-- Create a new User 2 --")
+my_user2 = User()
+my_user2.first_name = "John"
+my_user2.email = "airbnb2@mail.com"
+my_user2.password = "root"
+my_user2.save()
+print(my_user2)
 
-10. Console 1.0
+guillaume@ubuntu:~/AirBnB$ cat file.json ; echo ""
+{"BaseModel.2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4": {"__class__": "BaseModel", "id": "2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4", "updated_at": "2017-09-28T21:11:14.333862", "created_at": "2017-09-28T21:11:14.333852"}, "BaseModel.a42ee380-c959-450e-ad29-c840a898cfce": {"__class__": "BaseModel", "id": "a42ee380-c959-450e-ad29-c840a898cfce", "updated_at": "2017-09-28T21:11:15.504296", "created_at": "2017-09-28T21:11:15.504287"}, "BaseModel.af9b4cbd-2ce1-4e6e-8259-f578097dd15f": {"__class__": "BaseModel", "id": "af9b4cbd-2ce1-4e6e-8259-f578097dd15f", "updated_at": "2017-09-28T21:11:12.971544", "created_at": "2017-09-28T21:11:12.971521"}, "BaseModel.38a22b25-ae9c-4fa9-9f94-59b3eb51bfba": {"__class__": "BaseModel", "id": "38a22b25-ae9c-4fa9-9f94-59b3eb51bfba", "updated_at": "2017-09-28T21:11:13.753347", "created_at": "2017-09-28T21:11:13.753337"}, "BaseModel.9bf17966-b092-4996-bd33-26a5353cccb4": {"__class__": "BaseModel", "id": "9bf17966-b092-4996-bd33-26a5353cccb4", "updated_at": "2017-09-28T21:11:14.963058", "created_at": "2017-09-28T21:11:14.963049"}}
+guillaume@ubuntu:~/AirBnB$
+guillaume@ubuntu:~/AirBnB$ ./test_save_reload_user.py
+-- Reloaded objects --
+[BaseModel] (38a22b25-ae9c-4fa9-9f94-59b3eb51bfba) {'id': '38a22b25-ae9c-4fa9-9f94-59b3eb51bfba', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 13, 753337), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 13, 753347)}
+[BaseModel] (9bf17966-b092-4996-bd33-26a5353cccb4) {'id': '9bf17966-b092-4996-bd33-26a5353cccb4', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 963049), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 963058)}
+[BaseModel] (2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4) {'id': '2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 333852), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 333862)}
+[BaseModel] (a42ee380-c959-450e-ad29-c840a898cfce) {'id': 'a42ee380-c959-450e-ad29-c840a898cfce', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 15, 504287), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 15, 504296)}
+[BaseModel] (af9b4cbd-2ce1-4e6e-8259-f578097dd15f) {'id': 'af9b4cbd-2ce1-4e6e-8259-f578097dd15f', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 12, 971521), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 12, 971544)}
+-- Create a new User --
+[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'id': '38f22813-2753-4d42-b37c-57a17f1e4f88', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291), 'email': 'airbnb@mail.com', 'first_name': 'Betty', 'last_name': 'Bar', 'password': 'root'}
+-- Create a new User 2 --
+[User] (d0ef8146-4664-4de5-8e89-096d667b728e) {'id': 'd0ef8146-4664-4de5-8e89-096d667b728e', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848280), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848294), 'email': 'airbnb2@mail.com', 'first_name': 'John', 'password': 'root'}
+guillaume@ubuntu:~/AirBnB$
+guillaume@ubuntu:~/AirBnB$ cat file.json ; echo ""
+{"BaseModel.af9b4cbd-2ce1-4e6e-8259-f578097dd15f": {"id": "af9b4cbd-2ce1-4e6e-8259-f578097dd15f", "updated_at": "2017-09-28T21:11:12.971544", "created_at": "2017-09-28T21:11:12.971521", "__class__": "BaseModel"}, "BaseModel.38a22b25-ae9c-4fa9-9f94-59b3eb51bfba": {"id": "38a22b25-ae9c-4fa9-9f94-59b3eb51bfba", "updated_at": "2017-09-28T21:11:13.753347", "created_at": "2017-09-28T21:11:13.753337", "__class__": "BaseModel"}, "BaseModel.9bf17966-b092-4996-bd33-26a5353cccb4": {"id": "9bf17966-b092-4996-bd33-26a5353cccb4", "updated_at": "2017-09-28T21:11:14.963058", "created_at": "2017-09-28T21:11:14.963049", "__class__": "BaseModel"}, "BaseModel.2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4": {"id": "2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4", "updated_at": "2017-09-28T21:11:14.333862", "created_at": "2017-09-28T21:11:14.333852", "__class__": "BaseModel"}, "BaseModel.a42ee380-c959-450e-ad29-c840a898cfce": {"id": "a42ee380-c959-450e-ad29-c840a898cfce", "updated_at": "2017-09-28T21:11:15.504296", "created_at": "2017-09-28T21:11:15.504287", "__class__": "BaseModel"}, "User.38f22813-2753-4d42-b37c-57a17f1e4f88": {"id": "38f22813-2753-4d42-b37c-57a17f1e4f88", "created_at": "2017-09-28T21:11:42.848279", "updated_at": "2017-09-28T21:11:42.848291", "email": "airbnb@mail.com", "first_name": "Betty", "__class__": "User", "last_name": "Bar", "password": "root"}, "User.d0ef8146-4664-4de5-8e89-096d667b728e": {"id": "d0ef8146-4664-4de5-8e89-096d667b728e", "created_at": "2017-09-28T21:11:42.848280", "updated_at": "2017-09-28T21:11:42.848294", "email": "airbnb_2@mail.com", "first_name": "John", "__class__": "User", "password": "root"}}
+guillaume@ubuntu:~/AirBnB$ 
+guillaume@ubuntu:~/AirBnB$ ./test_save_reload_user.py
+-- Reloaded objects --
+[BaseModel] (af9b4cbd-2ce1-4e6e-8259-f578097dd15f) {'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 12, 971544), 'id': 'af9b4cbd-2ce1-4e6e-8259-f578097dd15f', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 12, 971521)}
+[BaseModel] (2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4) {'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 333862), 'id': '2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 333852)}
+[BaseModel] (9bf17966-b092-4996-bd33-26a5353cccb4) {'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 963058), 'id': '9bf17966-b092-4996-bd33-26a5353cccb4', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 963049)}
+[BaseModel] (a42ee380-c959-450e-ad29-c840a898cfce) {'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 15, 504296), 'id': 'a42ee380-c959-450e-ad29-c840a898cfce', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 15, 504287)}
+[BaseModel] (38a22b25-ae9c-4fa9-9f94-59b3eb51bfba) {'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 13, 753347), 'id': '38a22b25-ae9c-4fa9-9f94-59b3eb51bfba', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 13, 753337)}
+[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'password': '63a9f0ea7bb98050796b649e85481845', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'email': 'airbnb@mail.com', 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291), 'last_name': 'Bar', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88', 'first_name': 'Betty'}
+[User] (d0ef8146-4664-4de5-8e89-096d667b728e) {'password': '63a9f0ea7bb98050796b649e85481845', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848280), 'email': 'airbnb_2@mail.com', 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848294), 'id': 'd0ef8146-4664-4de5-8e89-096d667b728e', 'first_name': 'John'}
+-- Create a new User --
+[User] (246c227a-d5c1-403d-9bc7-6a47bb9f0f68) {'password': 'root', 'created_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611352), 'email': 'airbnb@mail.com', 'updated_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611363), 'last_name': 'Bar', 'id': '246c227a-d5c1-403d-9bc7-6a47bb9f0f68', 'first_name': 'Betty'}
+-- Create a new User 2 --
+[User] (fce12f8a-fdb6-439a-afe8-2881754de71c) {'password': 'root', 'created_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611354), 'email': 'airbnb_2@mail.com', 'updated_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611368), 'id': 'fce12f8a-fdb6-439a-afe8-2881754de71c', 'first_name': 'John'}
+guillaume@ubuntu:~/AirBnB$
+guillaume@ubuntu:~/AirBnB$ cat file.json ; echo ""
+{"BaseModel.af9b4cbd-2ce1-4e6e-8259-f578097dd15f": {"updated_at": "2017-09-28T21:11:12.971544", "__class__": "BaseModel", "id": "af9b4cbd-2ce1-4e6e-8259-f578097dd15f", "created_at": "2017-09-28T21:11:12.971521"}, "User.38f22813-2753-4d42-b37c-57a17f1e4f88": {"password": "63a9f0ea7bb98050796b649e85481845", "created_at": "2017-09-28T21:11:42.848279", "email": "airbnb@mail.com", "id": "38f22813-2753-4d42-b37c-57a17f1e4f88", "last_name": "Bar", "updated_at": "2017-09-28T21:11:42.848291", "first_name": "Betty", "__class__": "User"}, "User.d0ef8146-4664-4de5-8e89-096d667b728e": {"password": "63a9f0ea7bb98050796b649e85481845", "created_at": "2017-09-28T21:11:42.848280", "email": "airbnb_2@mail.com", "id": "d0ef8146-4664-4de5-8e89-096d667b728e", "updated_at": "2017-09-28T21:11:42.848294", "first_name": "John", "__class__": "User"}, "BaseModel.9bf17966-b092-4996-bd33-26a5353cccb4": {"updated_at": "2017-09-28T21:11:14.963058", "__class__": "BaseModel", "id": "9bf17966-b092-4996-bd33-26a5353cccb4", "created_at": "2017-09-28T21:11:14.963049"}, "BaseModel.a42ee380-c959-450e-ad29-c840a898cfce": {"updated_at": "2017-09-28T21:11:15.504296", "__class__": "BaseModel", "id": "a42ee380-c959-450e-ad29-c840a898cfce", "created_at": "2017-09-28T21:11:15.504287"}, "BaseModel.38a22b25-ae9c-4fa9-9f94-59b3eb51bfba": {"updated_at": "2017-09-28T21:11:13.753347", "__class__": "BaseModel", "id": "38a22b25-ae9c-4fa9-9f94-59b3eb51bfba", "created_at": "2017-09-28T21:11:13.753337"}, "BaseModel.2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4": {"updated_at": "2017-09-28T21:11:14.333862", "__class__": "BaseModel", "id": "2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4", "created_at": "2017-09-28T21:11:14.333852"}, "User.246c227a-d5c1-403d-9bc7-6a47bb9f0f68": {"password": "root", "created_at": "2017-09-28T21:12:19.611352", "email": "airbnb@mail.com", "id": "246c227a-d5c1-403d-9bc7-6a47bb9f0f68", "last_name": "Bar", "updated_at": "2017-09-28T21:12:19.611363", "first_name": "Betty", "__class__": "User"}, "User.fce12f8a-fdb6-439a-afe8-2881754de71c": {"password": "root", "created_at": "2017-09-28T21:12:19.611354", "email": "airbnb_2@mail.com", "id": "fce12f8a-fdb6-439a-afe8-2881754de71c", "updated_at": "2017-09-28T21:12:19.611368", "first_name": "John", "__class__": "User"}}
+guillaume@ubuntu:~/AirBnB$
+```
+**No unittests needed for the console**
 
-Update FileStorage to manage correctly serialization and deserialization of
-all our new classes: Place, State, City, Amenity and Review
+[9. More classes!](./state.py, ./city.py, ./amenity.py, ./place.py,
+./review.py)
 
-Update command interpreter (console.py) to allow those actions: show, create,
-destroy, update and all with all classes created previously.
+Write all those classes that inherit from `BaseModel`:
 
-11. All instances by class name
+* `State` (`models/state.py`):
+	* Public class attributes:
+		* `name`: string - empty string
+* `City` (`models/city.py`):
+	* Public class attributes:
+		* `state_id`: string - empty string: it will be the State.id
+		* `name`: string - empty string
+* `Amenity` (`models/amenity.py`):
+	* Public class attributes:
+		* `name`: string - empty string
+* `Place` (`models/place.py`):
+	* Public class attributes:
+		* `city_id`: string - empty string: it will be the `City.id`
+		* `user_id`: string - empty string: it will be the `User.id`
+		* `name`: string - empty string
+		* `description`: string - empty string
+		* `number_rooms`: integer - 0
+		* `number_bathrooms`: integer - 0
+		* `max_guest`: integer - 0
+		* `price_by_night`: integer - 0
+		* `latitude`: float - 0.0
+		* `longitude`: float - 0.0
+		* `amenity_ids`: list of string - empty list: will be the list of
+			`Amenity.id` later
+* `Review` (`models/review.py`):
+	* Public class attributes:
+		* `place_id`: string - empty string: it will be the `Place.id`
+		* `user_id`: string - empty string: it will be the `User.id`
+		* `text`: string - empty string
 
-Update command interpreter (console.py) to retrieve all instances of a class
-by using: <class name>.all().
+[10. Console 1.0](./console.py)
 
-12. Count instances
+Update `FileStorage` to manage correctly serialization and deserialization of
+all our new classes: `Place`, `State`, `City`, `Amenity` and `Review`
 
-Update command interpreter (console.py) to retrieve the number of instances
-of a class: <class name>.count().
+Update command interpreter (`console.py`) to allow those actions: `show`,
+`create`, `destroy`, `update` and `all` with all classes created previously.
 
-13. Show
+**No unittests needed for the console**
 
-Update command interpreter (console.py) to retrieve an instance based on
-its ID: <class name>.show(<id>).
+[11. All instances by class name](./console.py)
+
+Update command interpreter (`console.py`) to retrieve all instances of a class
+by using: `<class name>.all()`.
+```
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) User.all()
+[[User] (246c227a-d5c1-403d-9bc7-6a47bb9f0f68) {'first_name': 'Betty', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611352), 'updated_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611363), 'password': '63a9f0ea7bb98050796b649e85481845', 'email': 'airbnb@mail.com', 'id': '246c227a-d5c1-403d-9bc7-6a47bb9f0f68'}, [User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'first_name': 'Betty', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@mail.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}]
+(hbnb) 
+```
+**No unittests needed**
+
+[12. Count instances](./console.py)
+
+Update command interpreter (`console.py`) to retrieve the number of instances
+of a class: `<class name>.count()`.
+```
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) User.count()
+2
+(hbnb)
+```
+**No unittests needed**
+
+[13. Show](./console.py)
+
+Update command interpreter `(console.py)` to retrieve an instance based on
+its ID: `<class name>.show(<id>)`.
 
 Errors management must be the same as previously.
+```
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) User.show("246c227a-d5c1-403d-9bc7-6a47bb9f0f68")
+[User] (246c227a-d5c1-403d-9bc7-6a47bb9f0f68) {'first_name': 'Betty', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611352), 'updated_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611363), 'password': '63a9f0ea7bb98050796b649e85481845', 'email': 'airbnb@mail.com', 'id': '246c227a-d5c1-403d-9bc7-6a47bb9f0f68'}
+(hbnb) User.show("Bar")
+** no instance found **
+(hbnb)
+```
+**No unittests needed**
 
-14. Destroy
+[14. Destroy](./console.py)
 
-Update your command interpreter (console.py) to destroy an instance based
-on his ID: <class name>.destroy(<id>).
+Update your command interpreter (`console.py`) to destroy an instance based
+on his ID: `<class name>.destroy(<id>)`.
 
 Errors management must be the same as previously.
+```
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) User.count()
+2
+(hbnb) User.destroy("246c227a-d5c1-403d-9bc7-6a47bb9f0f68")
+(hbnb) User.count()
+1
+(hbnb) User.destroy("Bar")
+** no instance found **
+(hbnb)
+```
+**No unittests needed**
 
-15. Update
+[15. Update](./console.py)
 
-Update command interpreter (console.py) to update an instance based on
-his ID: <class name>.update(<id>, <attribute name>, <attribute value>).
+Update command interpreter (`console.py`) to update an instance based on
+his ID: `<class name>.update(<id>, <attribute name>, <attribute value>)`.
 
 Errors management must be the same as previously.
+```
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) User.show("38f22813-2753-4d42-b37c-57a17f1e4f88")
+[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'first_name': 'Betty', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@mail.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}
+(hbnb)
+(hbnb) User.update("38f22813-2753-4d42-b37c-57a17f1e4f88", "first_name", "John")
+(hbnb) User.update("38f22813-2753-4d42-b37c-57a17f1e4f88", "age", 89)
+(hbnb)
+(hbnb) User.show("38f22813-2753-4d42-b37c-57a17f1e4f88")
+[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'age': 89, 'first_name': 'John', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 15, 32, 299055), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@mail.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}
+(hbnb)
+```
+**No unittests needed**
 
-16. Update from dictionary
+[16. Update from dictionary](./console.py)
 
-Update command interpreter (console.py) to update an instance based on
+Update command interpreter (`console.py`) to update an instance based on
 his ID with a dictionary:
-<class name>.update(<id>, <dictionary representation>).
+`<class name>.update(<id>, <dictionary representation>)`.
 
 Errors management must be the same as previously.
+```
+guillaume@ubuntu:~/AirBnB$ ./console.py
+(hbnb) User.show("38f22813-2753-4d42-b37c-57a17f1e4f88")
+[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'age': 23, 'first_name': 'Bob', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 15, 32, 299055), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@mail.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}
+(hbnb) 
+(hbnb) User.update("38f22813-2753-4d42-b37c-57a17f1e4f88", {'first_name': "John", "age": 89})
+(hbnb) 
+(hbnb) User.show("38f22813-2753-4d42-b37c-57a17f1e4f88")
+[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'age': 89, 'first_name': 'John', 'last_name': 'Bar', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 17, 10, 788143), 'password': 'b9be11166d72e9e3ae7fd407165e4bd2', 'email': 'airbnb@mail.com', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88'}
+(hbnb)
+```
+**No unittests needed**
 
-17. Unittests for the Console!
+[17. Unittests for the Console!](./test_console.py)
 
-Write all unittests for console.py, all features!
+Write all unittests for `console.py`, all features!
 
 For testing the console, you should “intercept” STDOUT of it.
+```
+with patch('sys.stdout', new=StringIO()) as f:
+    HBNBCommand().onecmd("help show")
+```
+Otherwise, you will have to re-write the console by replacing `precmd` by `default`.
