@@ -1,6 +1,8 @@
 # 0x00. AirBnB clone - The console
 ### `Group project` `Python` `OOP`
 
+![65f4a1dd9c51265f49d0](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/a3c085f0-cd74-4e8e-a4a9-6d07e6880c38)
+
 ## Background Context
 Welcome to the **AirBnB** clone project!
 
@@ -121,7 +123,7 @@ $
 
 All tests should also pass in non-interactive mode: `$ echo "python3 -m unittest discover tests" | bash`
 
-
+![815046647d23428a14ca](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/c57fe779-0bd5-4be1-b0eb-5280fe97fd55)
 
 ## Tasks
 0.[README](./README.md), [AUTHORS](./AUTHORS)
