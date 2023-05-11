@@ -503,7 +503,7 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 ```
 **No unittests needed**
 
-[8. First User](./user.py)
+[8. First User](./models/user.py)
 
 Write a class `User` that inherits from `BaseModel`:
 
@@ -587,8 +587,8 @@ guillaume@ubuntu:~/AirBnB$
 ```
 **No unittests needed for the console**
 
-[9. More classes!](./state.py, ./city.py, ./amenity.py, ./place.py,
-./review.py)
+[9. More classes!](./models/state.py, ./models/city.py, ./models/amenity.py, ./models/place.py,
+./models/review.py)
 
 Write all those classes that inherit from `BaseModel`:
 
@@ -731,7 +731,7 @@ guillaume@ubuntu:~/AirBnB$ ./console.py
 ```
 **No unittests needed**
 
-[17. Unittests for the Console!](./test_console.py)
+[17. Unittests for the Console!](./tests/test_console.py)
 
 Write all unittests for `console.py`, all features!
 
