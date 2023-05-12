@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Python script to gegerate Authors of the Airbnb clone repository automatically"""
+"""Python script to gegerate Authors of the Airbnb clone repository"""
 
 from git import Repo
 import os
@@ -28,4 +28,3 @@ with open(output_file, 'w') as f:
 
     for contributor in contributors:
         f.write(f"{contributor.name} <{contributor.email}>\n")
-
