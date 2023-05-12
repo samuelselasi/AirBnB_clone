@@ -589,8 +589,8 @@ guillaume@ubuntu:~/AirBnB$
 ```
 **No unittests needed for the console**
 
-[9. More classes!](./models/state.py, ./models/city.py, ./models/amenity.py, ./models/place.py,
-./models/review.py)
+[9. More classes!](./models): [/models/state.py](./models/state.py), [models/city.py](./models/city.py), [models/amenity.py](./models/amenity.py), [models/place.py](./models/place.py),
+[models/review](./models/review.py)
 
 Write all those classes that inherit from `BaseModel`:
 
