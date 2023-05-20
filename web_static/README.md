@@ -61,5 +61,6 @@ During this project, you will learn how to manipulate HTML and CSS languages. HT
 
 ## More Info
 
+![hbnb_step1](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/e9017383-629b-4764-b0b6-7a8d010ae501)
 
 # Tasks
