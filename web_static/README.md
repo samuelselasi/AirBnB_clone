@@ -218,5 +218,4 @@ Write an HTML page that displays a `header`, `footer` and a `filters` box with a
 * `styles/4-filters.css`: for the `filters` style
 * `4-index.html` **won’t be W3C valid**, don’t worry, it’s temporary
 
-
-
+![Screenshot from 2023-05-20 22-15-00](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/4b3a0040-2c14-4ae7-806d-a5807cb37994)
