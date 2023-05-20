@@ -94,3 +94,17 @@ Layout:
 
 
 ![Screenshot from 2023-05-20 10-46-34](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/d4855a7b-d543-4e70-9837-cd6e6d2a0e56)
+
+
+[1. Head styling](./1-index.html)
+
+Write an HTML page that displays a `header` and a `footer` by using the `style` tag in the `head` tag (same as `0-index.html`)
+
+**Requirements**:
+
+* You must use the `header` and `footer` tags
+* You are not allowed to import any files
+* No inline styling
+* You must use the `style` tag in the `head` tag
+
+The layout must be exactly the same as [0-index.html](./0-index.html)
