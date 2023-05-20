@@ -126,4 +126,5 @@ Write an HTML page that displays a `header` and a `footer` by using CSS files (s
 	* [styles/2-footer.css](./styles/2-footer.css): for `footer` style
 The layout must be exactly the same as `1-index.html`
 
+![Screenshot from 2023-05-20 12-25-37](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/7b0bad07-8a51-4c16-87df-80f194f801d1)
 
