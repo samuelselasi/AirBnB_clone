@@ -166,3 +166,5 @@ Write an HTML page that displays a header and footer by using CSS files (same as
 * `styles/3-common.css`: for the global style (i.e `body` style)
 * `styles/3-header.css`: for the `header` style
 * `styles/3-footer.css`: for the `footer` style
+
+![Screenshot from 2023-05-20 21-10-27](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/aa63436e-5a99-4e24-8d84-10a719ccdca0)
