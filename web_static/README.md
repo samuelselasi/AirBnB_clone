@@ -108,3 +108,5 @@ Write an HTML page that displays a `header` and a `footer` by using the `style` 
 * You must use the `style` tag in the `head` tag
 
 The layout must be exactly the same as [0-index.html](./0-index.html)
+
+![Screenshot from 2023-05-20 11-12-11](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/781a1482-74c5-40ba-93c5-61ad8d00e1dd)
