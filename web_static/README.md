@@ -91,3 +91,6 @@ Layout:
 * You are not allowed to import any files
 * You are not allowed to use the `style` tag in the `head` tag
 * Use inline styling for all your tags
+
+
+![Screenshot from 2023-05-20 10-46-34](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/d4855a7b-d543-4e70-9837-cd6e6d2a0e56)
