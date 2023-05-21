@@ -26,3 +26,6 @@
 
 ### 7. Display results
 * [7-places.css](./7-places.css)
+
+### 8. More details
+* [8-places.css](./8-places.css)
