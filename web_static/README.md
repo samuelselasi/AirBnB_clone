@@ -293,4 +293,6 @@ Layout: (based on [5-index.html](./5-index.html))
 	* `styles/3-footer.css`: for the `footer` style
 	* `styles/6-filters.css`: for the `filters` style
 
+![Screenshot from 2023-05-21 12-19-40](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/9877c3c2-d629-430c-8900-7359a85d2b0f)
 
+![Screenshot from 2023-05-21 12-19-47](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/59428d28-ea78-48a3-8398-13a8ee54c509)
