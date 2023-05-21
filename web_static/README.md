@@ -257,4 +257,4 @@ Layout: (based on `4-index.html`)
 	* `styles/3-footer.css`: for the `footer` style
 	* `styles/5-filters.css`: for the `filters` style
 
-
+![Screenshot from 2023-05-21 10-03-20](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/d0854956-5046-45f9-ade6-f28e8f9991e0)
