@@ -289,7 +289,6 @@ Layout: (based on [5-index.html](./5-index.html))
 	* `styles/3-header.css`: for the `header` style
 	* `styles/3-footer.css`: for the `footer` style
 	* `styles/6-filters.css`: for the `filters` style
-	* 
 
 ![Screenshot from 2023-05-21 15-56-15](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/26d5d776-821a-47ff-b351-33d6d48c6829)
 
@@ -401,5 +400,6 @@ Add more information to a `Place` article:
 	* `styles/3-footer.css`: for the `foote`r style
 	* `styles/6-filters.css`: for the `filters` style
 	* `styles/8-places.css`: for the `places` style
-
+	
+![Screenshot from 2023-05-21 17-18-25](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/333f2d54-484f-4d98-9590-4ee852e7b319)
 
