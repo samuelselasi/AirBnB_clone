@@ -23,3 +23,6 @@
 
 ### 6. It's (h)over
 * [6-filters.css](./6-filters.css)
+
+### 7. Display results
+* [7-places.css](./7-places.css)
