@@ -219,3 +219,42 @@ Write an HTML page that displays a `header`, `footer` and a `filters` box with a
 * `4-index.html` **won’t be W3C valid**, don’t worry, it’s temporary
 
 ![Screenshot from 2023-05-20 22-15-00](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/4b3a0040-2c14-4ae7-806d-a5807cb37994)
+
+
+[5. More filters](./5-index.html)
+
+Write an HTML page that displays a `header`, `footer` and a `filters` box.
+
+Layout: (based on `4-index.html`)
+
+* Locations and Amenities filters:
+	* tag: `div`
+	* classname: `locations` for `location` tag and `amenities` for the other
+	* inside the section filters (same level as the button Search)
+	* height: `100%` of the section filters
+	* width: `25%` of the section filters
+	* border right `#DDDDDD 1px` only for the first `left` filter
+	* contains a title:
+		* tag: `h3`
+		* font weight: `600`
+		* text `States` or `Amenities`
+	* contains a subtitle:
+		* tag: `h4`
+		* font weight: `400`
+		* font size: `14px`
+		* text with fake contents
+
+**Requirements**:
+
+* You must use: `header`, `footer`, `section`, `button`, `h3`, `h4` tags
+* No inline style
+* You are not allowed to use the `img` tag
+* You are not allowed to use the `style` tag in the `head` tag
+* All images must be stored in the `images` folder
+* You must have `4` CSS files:
+	* `styles/4-common.css`: for the global style (`body` and `.container` styles)
+	* `styles/3-header.css`: for the `header` style
+	* `styles/3-footer.css`: for the `footer` style
+	* `styles/5-filters.css`: for the `filters` style
+
+
