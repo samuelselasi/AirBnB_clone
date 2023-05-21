@@ -29,3 +29,6 @@
 
 ### 8. More details
 * [8-places.css](./8-places.css)
+
+### 9. Full details
+* [100-places.css](./100-places.css)
