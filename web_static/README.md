@@ -92,8 +92,7 @@ Layout:
 * You are not allowed to use the `style` tag in the `head` tag
 * Use inline styling for all your tags
 
-
-![Screenshot from 2023-05-20 10-46-34](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/d4855a7b-d543-4e70-9837-cd6e6d2a0e56)
+![Screenshot from 2023-05-21 15-54-23](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/8898eb46-0704-48a2-9d6b-b442084f55f8)
 
 
 [1. Head styling](./1-index.html)
@@ -109,7 +108,7 @@ Write an HTML page that displays a `header` and a `footer` by using the `style` 
 
 The layout must be exactly the same as [0-index.html](./0-index.html)
 
-![Screenshot from 2023-05-20 11-12-11](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/781a1482-74c5-40ba-93c5-61ad8d00e1dd)
+![Screenshot from 2023-05-21 15-54-37](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/136ae61c-9e4d-44ff-9f7c-80930c9b9af2)
 
 
 [2. CSS files](./2-index.html)
@@ -126,8 +125,7 @@ Write an HTML page that displays a `header` and a `footer` by using CSS files (s
 	* [styles/2-footer.css](./styles/2-footer.css): for `footer` style
 The layout must be exactly the same as `1-index.html`
 
-![Screenshot from 2023-05-20 12-25-37](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/7b0bad07-8a51-4c16-87df-80f194f801d1)
-
+![Screenshot from 2023-05-21 15-54-54](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/b06103f2-3ecb-401a-bc0b-ca2f4a1fbcb3)
 
 [3. Zoning done!](./3-index.html)
 
@@ -167,8 +165,7 @@ Write an HTML page that displays a header and footer by using CSS files (same as
 * `styles/3-header.css`: for the `header` style
 * `styles/3-footer.css`: for the `footer` style
 
-![Screenshot from 2023-05-20 21-10-27](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/aa63436e-5a99-4e24-8d84-10a719ccdca0)
-
+![Screenshot from 2023-05-21 15-55-09](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/fb57cb66-b035-420f-ba8f-3102b7c7ade7)
 
 [4. Search!](./4-index.html)
 
@@ -218,7 +215,7 @@ Write an HTML page that displays a `header`, `footer` and a `filters` box with a
 * `styles/4-filters.css`: for the `filters` style
 * `4-index.html` **won’t be W3C valid**, don’t worry, it’s temporary
 
-![Screenshot from 2023-05-20 22-15-00](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/4b3a0040-2c14-4ae7-806d-a5807cb37994)
+![Screenshot from 2023-05-21 15-55-46](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/2d9686b8-1431-4022-8ab8-b9cec110de37)
 
 
 [5. More filters](./5-index.html)
@@ -257,7 +254,7 @@ Layout: (based on `4-index.html`)
 	* `styles/3-footer.css`: for the `footer` style
 	* `styles/5-filters.css`: for the `filters` style
 
-![Screenshot from 2023-05-21 10-03-20](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/d0854956-5046-45f9-ade6-f28e8f9991e0)
+![Screenshot from 2023-05-21 15-55-58](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/dd843686-f471-4d35-9579-d6a57568c375)
 
 
 [6. It's (h)over](./6-index.html)
@@ -292,10 +289,11 @@ Layout: (based on [5-index.html](./5-index.html))
 	* `styles/3-header.css`: for the `header` style
 	* `styles/3-footer.css`: for the `footer` style
 	* `styles/6-filters.css`: for the `filters` style
+	* 
 
-![Screenshot from 2023-05-21 12-19-40](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/9877c3c2-d629-430c-8900-7359a85d2b0f)
+![Screenshot from 2023-05-21 15-56-15](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/26d5d776-821a-47ff-b351-33d6d48c6829)
 
-![Screenshot from 2023-05-21 12-19-47](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/59428d28-ea78-48a3-8398-13a8ee54c509)
+![Screenshot from 2023-05-21 15-56-19](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/f94cad12-9075-4832-be18-697b90a69af3)
 
 
 [7. Display results](./7-index.html)
@@ -336,5 +334,5 @@ Layout: (based on [6-index.html](./6-index.html))
 	* `styles/6-filters.css`: for the `filters` style
 	* `styles/7-places.css`: for the `places` style
 
-![Screenshot from 2023-05-21 15-38-03](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/3ed59a64-6dd4-40fa-b5a7-0a388bd125fd)
+![Screenshot from 2023-05-21 15-56-34](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/8f633d55-217a-4ca6-b05e-85e71399c839)
 
