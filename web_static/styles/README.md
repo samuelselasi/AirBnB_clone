@@ -20,3 +20,6 @@
 
 ### 5. More filters
 * [5-filters.css](./5-filters.css): for the filters style
+
+### 6. It's (h)over
+* [6-filters.css](./6-filters.css)
