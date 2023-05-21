@@ -336,4 +336,5 @@ Layout: (based on [6-index.html](./6-index.html))
 	* `styles/6-filters.css`: for the `filters` style
 	* `styles/7-places.css`: for the `places` style
 
+![Screenshot from 2023-05-21 15-38-03](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/3ed59a64-6dd4-40fa-b5a7-0a388bd125fd)
 
