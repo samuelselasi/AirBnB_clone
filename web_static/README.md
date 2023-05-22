@@ -480,3 +480,16 @@ Improve the page by adding [responsive design](https://developer.mozilla.org/en-
 * etc.
 
 https://www.loom.com/share/cd4900d7ae40404781a09692ddbe710f
+
+
+[12. Accessibility](./103-index.html)
+
+Improve the page by adding [Accessibility support](https://developer.mozilla.org/en-US/docs/Learn/Accessibility)
+
+**Examples**:
+
+* Colors contrast
+* Header tags
+* etc.
+
+
