@@ -459,3 +459,11 @@ Add more information to a Place `article`:
 
 ![Screenshot from 2023-05-22 04-40-15](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/17e5ffac-f2f0-4b03-9c6c-d0b78fe854d1)
 
+
+[10. Flex](./101-index.html)
+
+Improve the Places section by using [Flexible boxes](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for all Place articles
+
+[Flexbox Froggy](http://flexboxfroggy.com/)
+
+
