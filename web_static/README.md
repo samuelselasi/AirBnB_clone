@@ -456,3 +456,6 @@ Add more information to a Place `article`:
 	* `styles/3-footer.css`: for the `footer` style
 	* `styles/6-filters.css`: for the `filters` style
 	* `styles/100-places.css`: for the `places` style
+
+![Screenshot from 2023-05-22 04-40-15](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/17e5ffac-f2f0-4b03-9c6c-d0b78fe854d1)
+
