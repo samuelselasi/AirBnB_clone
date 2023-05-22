@@ -479,4 +479,4 @@ Improve the page by adding [responsive design](https://developer.mozilla.org/en-
 * redesign search bar depending of the `width`
 * etc.
 
-
+https://www.loom.com/share/cd4900d7ae40404781a09692ddbe710f
