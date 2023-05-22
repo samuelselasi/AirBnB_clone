@@ -492,4 +492,5 @@ Improve the page by adding [Accessibility support](https://developer.mozilla.org
 * Header tags
 * etc.
 
+![Screenshot from 2023-05-22 07-24-25](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/9a791be7-9533-4f7d-8008-66d449da42ee)
 
