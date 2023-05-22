@@ -30,7 +30,7 @@ section.filters button:hover {
 .locations,
 .amenities {
 	height: 100%;
-	width: 25%;
+	width: 250px;
 	float: left;
 }
 
@@ -72,6 +72,7 @@ section.filters button:hover {
 }
 
 li {
+	text-align:left;
 	list-style-type: none;
 	margin-top:10px;
 	margin-bottom: 10px;
