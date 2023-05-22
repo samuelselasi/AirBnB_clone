@@ -467,3 +467,16 @@ Improve the Places section by using [Flexible boxes](https://developer.mozilla.o
 [Flexbox Froggy](http://flexboxfroggy.com/)
 
 https://www.loom.com/share/1ced4804eea74de39df0a23e3d1929b9
+
+
+[11. Responsive design](./102-index.html)
+
+Improve the page by adding [responsive design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) to display correctly in mobile or small screens.
+
+**Examples**:
+
+* no horizontal scrolling
+* redesign search bar depending of the `width`
+* etc.
+
+
