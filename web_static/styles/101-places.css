@@ -94,7 +94,7 @@ div.description {
 }
 
 .tv {
-        background-image: url(../ima:es/icon_tv.png);
+        background-image: url(../images/icon_tv.png);
 }
 
 .wifi {
@@ -109,7 +109,7 @@ div.description {
 .reviews h2 {
         text-align:left;
         font-size:16px;
-        padding: 38% 0 5% 0;
+        padding: 50% 0 5% 0;
         padding-bottom: 2%;
         border-bottom: 1px solid #DDDDDD;
 }
@@ -136,7 +136,7 @@ div.description {
 
 .places,
 .reviews ul li p {
-        text-align:left;
+        text-align:center;
         font-size:12px;
         padding-bottom: 5%;
         margin-top: 0px;
