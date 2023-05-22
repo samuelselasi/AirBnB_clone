@@ -72,24 +72,19 @@ div.description {
 	margin-top: 10px;
 }
 
-.places .amenities h2 {
-	padding: 5% 0 5% 0;
-	padding-bottom: 2%;
-	border-bottom: 1px solid #DDDDDD;
-}
-
 .places .amenities ul {
 	list-style: none;
-	justify-content: center;
+	justify-content: left;
 	padding: 0;
 }
 
 .places .amenities ul li {
 	background-size: 20px;
-	padding-left: 25px;
-	padding-bottom: 25px;
+	padding-left: 30px;
+	padding-bottom: 0px;
 	background-repeat: no-repeat;
 	line-height: 25px;
+	text-align:left;
 }
 
 .tv {
@@ -104,19 +99,28 @@ div.description {
 	background-image: url(../images/icon_pets.png);
 }
 
+.places .reviews h2 {
+	text-align:left;
+	font-size:16px;
+        padding: 38% 0 5% 0;
+        padding-bottom: 2%;
+        border-bottom: 1px solid #DDDDDD;
+}
+
 .places .reviews ul {
+	text-align:left;
 	list-style: none;
 	justify-content: center;
 	padding: 0;
 }
 
-.places .reviews ul li h3 {
+.places .reviews ul li {
 	background-size:20px;
 	text-align:left;
 	font-size:14px;
 	margin-top: 0;
-	padding-left:25px;
-	margin-bottom: 10px;
+	padding-left:0px;
+	margin-bottom: -15px;
 }
 
 .places .reviews ul li p {
