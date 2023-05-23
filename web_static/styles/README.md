@@ -22,13 +22,30 @@
 * [5-filters.css](./5-filters.css): for the filters style
 
 ### 6. It's (h)over
-* [6-filters.css](./6-filters.css)
+* [6-filters.css](./6-filters.css): for the filters style
 
 ### 7. Display results
-* [7-places.css](./7-places.css)
+* [7-places.css](./7-places.css): for the places style
 
 ### 8. More details
-* [8-places.css](./8-places.css)
+* [8-places.css](./8-places.css): for the places style
 
 ### 9. Full details
-* [100-places.css](./100-places.css)
+* [100-places.css](./100-places.css): for the places style
+
+### 10. Flex
+* [101-places.css](./101-places.css): Improve the Places section by using Flexible boxes for all Place articles
+
+### 11. Responsive design
+* [102-common.css](./102-common.css)
+* [102-header.css](./102-header.css)
+* [102-footer.css](./102-footer.css)
+* [102-filters.css](./102-filters.css)
+* [102-places.css](./102-places.css)
+
+### 12. Accessibility
+* [103-common.css](./103-common.css)
+* [103-header.css](./103-header.css)
+* [103-footer.css](./103-footer.css)
+* [103-filters.css](./103-filters.css)
+* [103-places.css](./103-places.css)
