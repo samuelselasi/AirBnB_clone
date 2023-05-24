@@ -401,7 +401,7 @@ Add more information to a `Place` article:
 	* `styles/6-filters.css`: for the `filters` style
 	* `styles/8-places.css`: for the `places` style
 	
-![Screenshot from 2023-05-21 17-18-25](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/333f2d54-484f-4d98-9590-4ee852e7b319)
+![Screenshot from 2023-05-24 23-00-51](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/1c75a333-4c66-4df6-8671-9b4d48a42155)
 
 
 [9. Full details](./100-index.html)
