@@ -37,6 +37,9 @@ div.price_by_night {
 }
 
 div.information {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: 80px;
 	border-top: 1px solid #DDDDDD;
 	border-bottom: 1px solid #DDDDDD;
@@ -45,6 +48,8 @@ div.information {
 div.max_guest,
 div.number_rooms,
 div.number_bathrooms {
+	position: relative;
+	left: 30px;
 	line-height: 140px;
 	width: 100px;
 	height: 100%;
@@ -100,6 +105,7 @@ div.description {
 }
 
 .places .reviews h2 {
+	margin-top: 60px;
 	text-align:left;
 	font-size:16px;
         padding: 38% 0 5% 0;

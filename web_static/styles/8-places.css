@@ -45,6 +45,8 @@ div.information {
 div.max_guest,
 div.number_rooms,
 div.number_bathrooms {
+	position:relative;
+	left:30px;
 	line-height: 140px;
 	width: 100px;
 	height: 100%;

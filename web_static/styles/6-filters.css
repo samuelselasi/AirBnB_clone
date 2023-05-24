@@ -21,6 +21,7 @@ section.filters button {
 	color: #FFFFFF;
 	float: right;
 	margin: 11px 30px;
+	margin-top: -60px;
 }
 
 section.filters button:hover {
@@ -30,7 +31,7 @@ section.filters button:hover {
 .locations,
 .amenities {
 	height: 100%;
-	width: 250px;
+	width: 390px;
 	float: left;
 }
 
