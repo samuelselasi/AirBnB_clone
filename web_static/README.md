@@ -457,7 +457,7 @@ Add more information to a Place `article`:
 	* `styles/6-filters.css`: for the `filters` style
 	* `styles/100-places.css`: for the `places` style
 
-![Screenshot from 2023-05-22 04-40-15](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/17e5ffac-f2f0-4b03-9c6c-d0b78fe854d1)
+![Screenshot from 2023-05-24 23-01-43](https://github.com/samuelselasi/AirBnB_clone/assets/85158665/b17e946f-3fc3-49d8-8348-4e1c0d2b3692)
 
 
 [10. Flex](./101-index.html)
